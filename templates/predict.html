@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Catterpillar IDP Competition</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="./static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="./static/css2/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+  <style>
+    body {
+      background-image: url('https://s19528.pcdn.co/wp-content/uploads/2021/04/DIY-Diagnostics.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+    </style>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="header center orange-text" align="center" style="color: white;">Clutch Failure Prediction</h1>
+      <div class="row center">
+        <h3 class="header col s12 light" align="center" style="color: white;">Input the following vibrational parameters
+        <br>
+        </h3>
+      </div>
+              <div class="row">
+    <form action='/predict' method="POST" class="col s12">
+      <div class="row">
+        <div class="input-field col s4" align = "center">
+            <label for="RMS_var" style="background-color: #FFFF00;"><b>RMS</b></label>
+            <br>
+          <input   id="RMS_var" name="RMS" type="text" class="validate" placeholder="Enter the RMS value" style="color: white;">
+        </div>
+        <div class="input-field col s4" align = "center">
+          <label for="Maximum_var" style="background-color: #FFFF00;"><b>Maximum</b></label>
+            <br>
+          <input id="Maximum_var"  name="Maximum" type="text" class="validate" placeholder="Enter the Maximum value" style="color: white;">
+        </div>
+        <div class="input-field col s4" align = "center">
+            <label for="Range_var" style="background-color: #FFFF00;"><b>Range</b></label>
+            <br>
+          <input id="Range_var" name="Range" type="text" class="validate" placeholder="Enter the Range value" style="color: white;">
+        </div>
+        <div class="input-field col s4" align = "center">
+            <label for="Standard_Deviation" style="background-color:#FFFF00;"><b>StandardDeviation</b></label>
+            <br>
+          <input id="Standard_Deviation" name="StandardDeviation" type="text" class="validate" placeholder="Enter the Standard Deviation value" style="color: white;">
+        </div>
+        <div class="input-field col s4" align = "center">
+            <label for="Sample_Variance" style="background-color: #FFFF00;"><b>SampleVariance</b></label>
+            <br>
+          <input id="Sample_Variance" name="SampleVariance" type="text" class="validate" placeholder="Enter the Sample Variance value" style="color: white;">
+        </div>
+        <div class="input-field col s4" align = "center">
+            <label for="Standard_Error" style="background-color:#FFFF00;"> <b>StandaradError</b></label>
+            <br>
+          <input id="Standard_Error" name="StandaradError" type="text" class="validate" placeholder="Enter the Standard Error value" style="color: white;">
+        </div>
+        <div class="input-field col s4" align = "center">
+            <label for="P10_var" style="background-color:#FFFF00;"><b>P10</b></label>
+            <br>
+          <input id="P10_var" name="P10" type="text" class="validate" placeholder="Enter the P10 value" style="color: white;">
+        </div>
+      </div>
+      <br>
+      <div class="row center" align ="center">
+          <button type="submit" class="btn-large waves-effect waves-light orange">Predict Probability</button>
+      </div>
+    </form>
+      </div>
+      <br><h1 align="center" ><b style="background-color:#FF0000;">Pred</b><b style="background-color:#FFFF00;">ict</b><b style="background-color:#7CFC00;">ion</b></h1>
+      </div>
+    </div>
+    <br><div align="center"><h4 style="color: white;">{{pred}}</h4></div><br>
+    </div>
+  </div>
+<div>
+<br><br>
+</div>
+  <footer class="page-footer orange">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h2 class="white-text" style="color: white;">Note:</h2>
+          <p class="white-text" style="color: white;">We are a team of college students pursuing M.Tech Mechatronics working on this project for Catterpillar IDP Competition. Any amount of work from people would help and continue development on this project and that is greatly appreciated.</p>
+        </div>
+        <div class="col l3 s12">
+          <h3 class="white-text" style="color: white;">Our LinkedIn Proflies</h3>
+          <ul>
+            <li><a class="white-text" href="https://www.linkedin.com/in/mohith-sai-75930318b" target="_blank" style="color: white;">Mohith Sai G (ML & Website Devloper)</a></li>
+            <li><a class="white-text" href="https://www.linkedin.com/in/shriram-subramaniabharathi-006491146/" target="_blank" style="color: white;">Shriram S (Data Statistics Analyst)</a></li>
+            <li><a class="white-text" href="https://www.linkedin.com/in/safeer-pp-bba381137" target="_blank" style="color: white;">Muhammed Safeer PP (Testing Engineer)</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src=".js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  </body>
+</html>
